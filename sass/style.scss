@@ -1,8 +1,9 @@
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@700&display=swap');
 
-$primary: #9890e3;
-$secondary: #b1f4cf;
+$primary: #0d292e;
+$secondary: #bbcace;
+$tittle: #54aac4;
 
 $primary-font: roboto;
 $secondary-font: open sans;
@@ -13,40 +14,57 @@ $paregraph-size: 1.8rem;
 *, html {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 } 
 
 body {
   font-size: 62.5%;
-  background-image: linear-gradient(to top, $primary 0%, $secondary 100%);
+  background-image: linear-gradient(to top, $primary 100%, $secondary 50%);
   background-repeat: no-repeat;
   background-size: cover;
   font-family: $secondary-font, sans-serif;
   height: 200vh;
   width: 100vw;
-  color: black;
+  color: $secondary;
 }
 
 header {
-  margin-top: 20vh;
+  display: flex;
+  flex-direction: column;
+
   font-family: $primary-font,sans-serif;
   font-size: $link-size;
   text-transform: uppercase;
-  height: 20vh;
-  div {
-    background-image: url('../images/gummy-macbook.png');
+  a{
+    color: $tittle;
+  }
+  a:hover {
+    color: white;
+    transition: 0.5s;
+    text-decoration: underline;
+    
+  }
+  .bg-image {
+    background-image: url('../images/pexels-josh-sorenson-1714208.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    height: 10vh;
+    height: 1000px;
+    width: 100%;
   }
 }
 
 main {
-  margin-top: 10vh;
   h2 {
     font-size: $title-size;
-    color: $secondary;
+    color: $tittle;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+  }
+  h3 {
+    text-align: center;
   }
   p {
     font-size: $paregraph-size;
+    margin-left: 10vw;
   }
 }
